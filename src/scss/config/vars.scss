@@ -1,0 +1,75 @@
+$siteResolution: 1px;
+$mainFont: 'Inter', Arial, sans-serif;
+$mainWeight: 400;
+$lineHeightMedium: 1.2;
+$lineHeightTitle: 1.1;
+$lineHeightDefault: $lineHeightMedium;
+
+$containerWidth: 1240rem;
+
+$radiusSm: 8rem;
+$radiusMd: 16rem;
+$radiusLg: 20rem;
+$radiusLgg: 24rem;
+$radiusXl: 40rem;
+
+$headerGap: 25rem;
+
+$fontFamily: $mainFont, sans-serif;
+$fontWeight: $mainWeight;
+
+$gradientAccent: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+$gradientAccentLight: linear-gradient(240deg, rgba(41, 126, 226, .12) 3.57%, rgba(24, 97, 182, .12) 86.24%);
+
+$transition: all .4s 0ms;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;
+
+:root {
+  --fs-default: 20rem;
+  --fs-1: 80rem;
+  --fs-2: 56rem;
+  --fs-3: 42rem;
+  --fs-4: 20rem;
+  --fs-5: 18rem;
+  --fs-6: 16rem;
+  --fs-7: 14rem;
+  --fs-8: 22rem;
+  --offset: 10rem;
+  --offset-: -10rem;
+  --gap: 20rem;
+  --gap-: -20rem;
+  --col: 8.33333333333%;
+  --whiteColor: 255, 255, 255;
+  --blackColor: 13, 13, 18;
+  --black2Color: 35, 35, 40;
+  --black3Color: 24, 24, 29;
+  --black4Color: 17, 17, 17;
+  --black5Color: 37, 37, 37;
+  --blue1Color: 65, 164, 223;
+  --blue2Color: 41, 126, 226;
+  --paleBlueColor: 247, 249, 251;
+  --steelGrayColor: 182, 186, 191;
+  --gray1Color: rgba(var(--whiteColor), .8);
+  --accentColor: var(--blue1Color);
+  --accentColorF: rgba(var(--blue1Color), 1);
+  --fontColor: rgba(var(--blackColor), 1);
+  --bgSite: rgba(var(--whiteColor), 1);
+  @media (max-width: $lg) {
+    --fs-default: 18rem;
+    --fs-1: 46rem;
+    --fs-2: 32rem;
+    --fs-3: 28rem;
+    --fs-4: 18rem;
+  }
+}

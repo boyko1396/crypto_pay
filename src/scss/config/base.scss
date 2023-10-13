@@ -1,0 +1,59 @@
+@import 'keyframes';
+
+.container {
+  width: 100%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.row {
+  margin: 0 var(--offset-);
+  display: flex;
+  flex-wrap: wrap;
+  &__col {
+    max-width: 100%;
+    min-height: 1rem;
+    padding: 0 var(--offset);
+    flex-grow: 1;
+    &--1 {
+      @extend .row__col;
+      max-width: 8.33333333333%;
+      flex-basis: 8.33333333333%;
+    }
+    &--2 {
+      @extend .row__col;
+      max-width: 16.6666666667%;
+      flex-basis: 16.6666666667%;
+    }
+    &--3 {
+      @extend .row__col;
+      max-width: 25%;
+      flex-basis: 25%;
+    }
+    &--4 {
+      @extend .row__col;
+      max-width: 33.333333%;
+      flex-basis: 33.333333%;
+    }
+    &--5 {
+      @extend .row__col;
+      max-width: 41.6666666667%;
+      flex-basis: 41.6666666667%;
+    }
+    &--6 {
+      @extend .row__col;
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+    &--7 {
+      @extend .row__col;
+      max-width: 58.3333333333%;
+      flex-basis: 58.3333333333%;
+    }
+  }
+}
+
+.ws-nowrap {
+  white-space: nowrap;
+}

@@ -1,0 +1,135 @@
+.panel-layout {
+  &--theme {
+    &-light {
+    }
+    &-dark {
+      background: rgba(var(--black2Color), 1);
+      color: rgba(var(--whiteColor), 1);
+      transition: $transition;
+      transition-property: background, color;
+      .btn--theme-accentlight {
+        
+      }
+    }
+  }
+  &__container {
+  }
+  &__header {
+    padding: 40rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $lg) {
+      padding: 20rem 0;
+    }
+  }
+  &__brand {
+    flex: 0 0 64rem;
+    transition: $transition;
+    @media (max-width: $lg) {
+      flex-basis: 46rem;
+    }
+    &:hover {
+      opacity: .7;
+    }
+    picture {
+      width: 100%;
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__nav {
+    margin: 0 auto;
+    @media (max-width: $lg) {
+      display: none;
+    }
+    &-list {
+      margin: 0 26rem;
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+    }
+    &-item {
+      margin: 0 8rem;
+      padding: 0;
+    }
+    &-link {
+      @extend %area-click;
+      padding: 8rem;
+      display: block;
+      font-weight: 500;
+      &:hover {
+        color: rgba(var(--accentColor), 1);
+        transition: $transition;
+        transition-property: color;
+      }
+    }
+  }
+  &__switch-theme {
+    @extend %area-click, %btn-reset;
+    width: 32rem;
+    height: 32rem;
+    margin-right: 10rem;
+    margin-left: auto;
+    flex: 0 0 32rem;
+    border-radius: 50%;
+    transition: $transition;
+    transition-property: color;
+    cursor: pointer;
+    @media (max-width: $lg) {
+      margin-right: 6rem;
+    }
+    &:hover {
+      color: rgba(var(--accentColor), 1);
+    }
+    .u-icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: $transition;
+      transition-property: transform, opacity, visibility;
+      &:nth-child(1) {
+      }
+      &:nth-child(2) {
+      }
+    }
+    &.is-active {
+      .u-icon {
+        &:nth-child(1) {
+          transform: rotate(-245deg);
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:nth-child(2) {
+        }
+      }
+    }
+    &:not(.is-active) {
+      .u-icon {
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+          transform: rotate(245deg);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  &__btn {
+  }
+  &__copyright {
+    margin: -16rem 0 0;
+    font-weight: 500;
+    @media (max-width: $md) {
+      margin-top: 13rem;
+    }
+  }
+}
