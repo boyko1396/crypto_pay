@@ -8,6 +8,7 @@
   ExpiresByType image/jpeg "access 1 year"
   ExpiresByType image/gif "access 1 year"
   ExpiresByType image/png "access 1 year"
+  ExpiresByType image/webp "access 1 year"
   ExpiresByType text/css "access 1 month"
   ExpiresByType application/pdf "access 1 month"
   ExpiresByType text/x-javascript "access 1 month"
@@ -18,7 +19,7 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} (jpg|jpeg|png|gif)$ [NC]
+  RewriteCond %{REQUEST_FILENAME} (jpg|jpeg|png|gif|webp)$ [NC]  # Додавання формату WebP
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule .* - [E=HTTP_CACHE_CONTROL:max-age=31536000]
 </IfModule>
